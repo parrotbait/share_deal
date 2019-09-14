@@ -13,3 +13,13 @@
 "error_http_bad_content_type" = "Invalid content type: %@";
 "error_http_json_decode_error" = "JSON decode error: %@";
 "error_http_bad_status_code" = "Unexpected status code: %d";
+"selling_loading_hud_text" = "Loading...";
+"selling_cell_title" = "Certificate #%@";
+"selling_cell_number_owned" = "Number owned: %@";
+"sell_share_dialog_title" = "Sell shares";
+"sell_share_dialog_total_price" = "Total";
+"sell_share_dialog_error_numerical_text" = "Expected positive numerical value";
+"sell_share_dialog_insufficient_shares" = "You only have %d to sell";
+"selling_high_percent_warning" = "Warning: you are selling over %d%% of your shares";
+"common_current_price" = "Current Price: %@";
+"common_total_shares" = "Total shares: %d";

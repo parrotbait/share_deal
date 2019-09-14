@@ -1,38 +1,50 @@
 PODS:
+  - MBProgressHUD (1.1.0)
   - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.1)
+  - Reveal-SDK (24)
   - RxCocoa (5.0.0):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
   - RxRelay (5.0.0):
     - RxSwift (~> 5)
   - RxSwift (5.0.0)
+  - SkyFloatingLabelTextField (3.7.0)
   - SwiftLint (0.35.0)
 
 DEPENDENCIES:
+  - MBProgressHUD (~> 1.1.0)
   - R.swift (~> 5.0.3)
+  - Reveal-SDK
   - RxCocoa (~> 5.0.0)
   - RxSwift (~> 5.0.0)
+  - SkyFloatingLabelTextField (~> 3.7.0)
   - SwiftLint (~> 0.35.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - MBProgressHUD
     - R.swift
     - R.swift.Library
+    - Reveal-SDK
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SkyFloatingLabelTextField
     - SwiftLint
 
 SPEC CHECKSUMS:
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  Reveal-SDK: 5d7e56b8f018c0a88b3a2c10bf68d598bbd3b071
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  SkyFloatingLabelTextField: 4b46db0ab1ccde0919cded29c656e6b4805eda04
   SwiftLint: 5553187048b900c91aa03552807681bb6b027846
 
-PODFILE CHECKSUM: 2f4972332bd31244f0c64cff3b9cc289a2d06988
+PODFILE CHECKSUM: 758b2cf28c2164aed156f6b95acaa2688c18507f
 
 COCOAPODS: 1.7.1

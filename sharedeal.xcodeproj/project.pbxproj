@@ -48,6 +48,12 @@
 		D74FA0D8232D1A7B009ED99E /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0D7232D1A7B009ED99E /* HttpError.swift */; };
 		D74FA0DB232D1DBE009ED99E /* DefaultHttpJsonResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0DA232D1DBE009ED99E /* DefaultHttpJsonResponseParser.swift */; };
 		D74FA0DD232D1DCC009ED99E /* HttpResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0DC232D1DCC009ED99E /* HttpResponseParser.swift */; };
+		D74FA0E1232D2B67009ED99E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0E0232D2B67009ED99E /* UIView.swift */; };
+		D74FA0E9232D3259009ED99E /* BaseDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0E8232D3259009ED99E /* BaseDialog.swift */; };
+		D74FA0ED232D32B7009ED99E /* SellShareDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0EB232D32B7009ED99E /* SellShareDialog.swift */; };
+		D74FA0EE232D32B7009ED99E /* SellShareDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74FA0EC232D32B7009ED99E /* SellShareDialog.xib */; };
+		D74FA0F0232D34F8009ED99E /* SellShareDialogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0EF232D34F8009ED99E /* SellShareDialogViewModel.swift */; };
+		D74FA0F2232D7152009ED99E /* ShareCertificateRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0F1232D7152009ED99E /* ShareCertificateRecord.swift */; };
 		EEE8E82C0D4424A997B5B17F /* Pods_sharedealTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCAA0B9FBCD41FD61C1606C /* Pods_sharedealTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +128,13 @@
 		D74FA0D7232D1A7B009ED99E /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		D74FA0DA232D1DBE009ED99E /* DefaultHttpJsonResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHttpJsonResponseParser.swift; sourceTree = "<group>"; };
 		D74FA0DC232D1DCC009ED99E /* HttpResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponseParser.swift; sourceTree = "<group>"; };
+		D74FA0DF232D264A009ED99E /* sharedeal-bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sharedeal-bridging-header.h"; sourceTree = "<group>"; };
+		D74FA0E0232D2B67009ED99E /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		D74FA0E8232D3259009ED99E /* BaseDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDialog.swift; sourceTree = "<group>"; };
+		D74FA0EB232D32B7009ED99E /* SellShareDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellShareDialog.swift; sourceTree = "<group>"; };
+		D74FA0EC232D32B7009ED99E /* SellShareDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SellShareDialog.xib; sourceTree = "<group>"; };
+		D74FA0EF232D34F8009ED99E /* SellShareDialogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellShareDialogViewModel.swift; sourceTree = "<group>"; };
+		D74FA0F1232D7152009ED99E /* ShareCertificateRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCertificateRecord.swift; sourceTree = "<group>"; };
 		F948E7C622514E59A561D943 /* Pods-sharedeal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharedeal.debug.xcconfig"; path = "Target Support Files/Pods-sharedeal/Pods-sharedeal.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -237,6 +250,7 @@
 				D74FA0B7232D067A009ED99E /* Generated */,
 				D74FA078232CF539009ED99E /* Logic */,
 				D74FA075232CF539009ED99E /* UI */,
+				D74FA0DF232D264A009ED99E /* sharedeal-bridging-header.h */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -244,6 +258,7 @@
 		D74FA075232CF539009ED99E /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				D74FA0E7232D3242009ED99E /* Components */,
 				D74FA0D2232D1787009ED99E /* Resources */,
 				D74FA0C8232D1023009ED99E /* Extensions */,
 				D74FA07D232CF72B009ED99E /* Navigation */,
@@ -256,7 +271,6 @@
 		D74FA078232CF539009ED99E /* Logic */ = {
 			isa = PBXGroup;
 			children = (
-				D74FA0D9232D1DA4009ED99E /* Parsers */,
 				D74FA09F232CFBEC009ED99E /* Extensions */,
 				D74FA08F232CF854009ED99E /* Models */,
 				D74FA088232CF7AB009ED99E /* Services */,
@@ -275,6 +289,7 @@
 		D74FA07C232CF714009ED99E /* Selling */ = {
 			isa = PBXGroup;
 			children = (
+				D74FA0EA232D32B7009ED99E /* Dialogs */,
 				D74FA0C1232D0EEF009ED99E /* Cells */,
 				D74FA076232CF539009ED99E /* ShareSellListViewController.swift */,
 				D74FA084232CF79B009ED99E /* ShareSellListViewModel.swift */,
@@ -359,6 +374,7 @@
 			children = (
 				D74FA0AB232CFE93009ED99E /* ShareCertificate.swift */,
 				D74FA0AD232CFF58009ED99E /* SharesPrice.swift */,
+				D74FA0F1232D7152009ED99E /* ShareCertificateRecord.swift */,
 			);
 			path = Shares;
 			sourceTree = "<group>";
@@ -393,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				D74FA0D0232D1752009ED99E /* UIViewController.swift */,
+				D74FA0E0232D2B67009ED99E /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -421,13 +438,6 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
-		D74FA0D9232D1DA4009ED99E /* Parsers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Parsers;
-			sourceTree = "<group>";
-		};
 		D74FA0DE232D1DD3009ED99E /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
@@ -435,6 +445,24 @@
 				D74FA0DA232D1DBE009ED99E /* DefaultHttpJsonResponseParser.swift */,
 			);
 			path = Parsers;
+			sourceTree = "<group>";
+		};
+		D74FA0E7232D3242009ED99E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D74FA0E8232D3259009ED99E /* BaseDialog.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D74FA0EA232D32B7009ED99E /* Dialogs */ = {
+			isa = PBXGroup;
+			children = (
+				D74FA0EB232D32B7009ED99E /* SellShareDialog.swift */,
+				D74FA0EC232D32B7009ED99E /* SellShareDialog.xib */,
+				D74FA0EF232D34F8009ED99E /* SellShareDialogViewModel.swift */,
+			);
+			path = Dialogs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -555,6 +583,7 @@
 				D74FA04A232CF477009ED99E /* Assets.xcassets in Resources */,
 				D74FA0A9232CFE28009ED99E /* Podfile in Resources */,
 				D74FA048232CF477009ED99E /* Main.storyboard in Resources */,
+				D74FA0EE232D32B7009ED99E /* SellShareDialog.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,14 +737,18 @@
 				D74FA0D1232D1752009ED99E /* UIViewController.swift in Sources */,
 				D74FA0C3232D0EF9009ED99E /* ShareCellViewModel.swift in Sources */,
 				D74FA0CF232D132D009ED99E /* ShareSellListCell.swift in Sources */,
+				D74FA0ED232D32B7009ED99E /* SellShareDialog.swift in Sources */,
 				D74FA08A232CF7B7009ED99E /* ServiceProvider.swift in Sources */,
 				D74FA0CA232D1023009ED99E /* Double.swift in Sources */,
 				D74FA092232CF863009ED99E /* Environment.swift in Sources */,
 				D74FA0D8232D1A7B009ED99E /* HttpError.swift in Sources */,
+				D74FA0E1232D2B67009ED99E /* UIView.swift in Sources */,
 				D74FA098232CF8C4009ED99E /* ServiceProviderImpl.swift in Sources */,
 				D74FA0A1232CFC03009ED99E /* HTTPURLResponse.swift in Sources */,
 				D74FA0AE232CFF58009ED99E /* SharesPrice.swift in Sources */,
 				D74FA0AC232CFE93009ED99E /* ShareCertificate.swift in Sources */,
+				D74FA0F2232D7152009ED99E /* ShareCertificateRecord.swift in Sources */,
+				D74FA0E9232D3259009ED99E /* BaseDialog.swift in Sources */,
 				D74FA07A232CF539009ED99E /* AppDelegate.swift in Sources */,
 				D74FA0B9232D067A009ED99E /* R.generated.swift in Sources */,
 				D74FA09A232CF8FD009ED99E /* HttpRequest.swift in Sources */,
@@ -732,6 +765,7 @@
 				D74FA0B1232CFFAB009ED99E /* Currency.swift in Sources */,
 				D74FA081232CF761009ED99E /* Coordinator.swift in Sources */,
 				D74FA0A3232CFC7F009ED99E /* Data.swift.swift in Sources */,
+				D74FA0F0232D34F8009ED99E /* SellShareDialogViewModel.swift in Sources */,
 				D74FA08E232CF80E009ED99E /* HttpService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -919,6 +953,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.eddielong.sharedeal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$PROJECT_DIR/sharedeal/Source/sharedeal-bridging-header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -941,6 +976,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.eddielong.sharedeal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$PROJECT_DIR/sharedeal/Source/sharedeal-bridging-header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

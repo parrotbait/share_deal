@@ -44,7 +44,7 @@ extension AppDelegate {
             fatalError("Expected to find initial viewcontroller in storyboard")
         }
         
-        let coordinator = ShareSellingListCoordinatorImpl()
+        let coordinator = ShareSellingListCoordinatorImpl(vc: sellingVC)
         let provider = getProvider()
         let repo = ShareSellingRepositoryImpl(provider: provider)
         sellingVC.viewModel = ShareSellingListViewModel(provider: provider,

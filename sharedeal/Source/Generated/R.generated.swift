@@ -38,15 +38,27 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
   struct nib {
+    /// Nib `SellShareDialog`.
+    static let sellShareDialog = _R.nib._SellShareDialog()
     /// Nib `ShareSellListCell`.
     static let shareSellListCell = _R.nib._ShareSellListCell()
+    
+    /// `UINib(name: "SellShareDialog", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.sellShareDialog) instead")
+    static func sellShareDialog(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.sellShareDialog)
+    }
     
     /// `UINib(name: "ShareSellListCell", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.shareSellListCell) instead")
     static func shareSellListCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.shareSellListCell)
+    }
+    
+    static func sellShareDialog(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.sellShareDialog.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
     
     static func shareSellListCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ShareSellListCell? {
@@ -86,26 +98,56 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 7 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 17 localization keys.
     struct localizable {
+      /// Value: Certificate #%@
+      static let selling_cell_title = Rswift.StringResource(key: "selling_cell_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Connection error: %@
       static let error_http_connection_error = Rswift.StringResource(key: "error_http_connection_error", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Current Price: %@
+      static let common_current_price = Rswift.StringResource(key: "common_current_price", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Empty data returned from the server
       static let error_http_empty = Rswift.StringResource(key: "error_http_empty", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Error!
       static let common_error_title = Rswift.StringResource(key: "common_error_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Expected positive numerical value
+      static let sell_share_dialog_error_numerical_text = Rswift.StringResource(key: "sell_share_dialog_error_numerical_text", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Invalid content type: %@
       static let error_http_bad_content_type = Rswift.StringResource(key: "error_http_bad_content_type", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: JSON decode error: %@
       static let error_http_json_decode_error = Rswift.StringResource(key: "error_http_json_decode_error", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Loading...
+      static let selling_loading_hud_text = Rswift.StringResource(key: "selling_loading_hud_text", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Number owned: %@
+      static let selling_cell_number_owned = Rswift.StringResource(key: "selling_cell_number_owned", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Ok
       static let common_ok_button = Rswift.StringResource(key: "common_ok_button", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Sell shares
+      static let sell_share_dialog_title = Rswift.StringResource(key: "sell_share_dialog_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Total
+      static let sell_share_dialog_total_price = Rswift.StringResource(key: "sell_share_dialog_total_price", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Total shares: %d
+      static let common_total_shares = Rswift.StringResource(key: "common_total_shares", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Unexpected status code: %d
       static let error_http_bad_status_code = Rswift.StringResource(key: "error_http_bad_status_code", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Warning: you are selling over %d%% of your shares
+      static let selling_high_percent_warning = Rswift.StringResource(key: "selling_high_percent_warning", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: You only have %d to sell
+      static let sell_share_dialog_insufficient_shares = Rswift.StringResource(key: "sell_share_dialog_insufficient_shares", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      
+      /// Value: Certificate #%@
+      static func selling_cell_title(_ value1: String) -> String {
+        return String(format: NSLocalizedString("selling_cell_title", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
+      }
       
       /// Value: Connection error: %@
       static func error_http_connection_error(_ value1: String) -> String {
         return String(format: NSLocalizedString("error_http_connection_error", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
+      }
+      
+      /// Value: Current Price: %@
+      static func common_current_price(_ value1: String) -> String {
+        return String(format: NSLocalizedString("common_current_price", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
       }
       
       /// Value: Empty data returned from the server
@@ -118,6 +160,11 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("common_error_title", bundle: R.hostingBundle, comment: "")
       }
       
+      /// Value: Expected positive numerical value
+      static func sell_share_dialog_error_numerical_text(_: Void = ()) -> String {
+        return NSLocalizedString("sell_share_dialog_error_numerical_text", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// Value: Invalid content type: %@
       static func error_http_bad_content_type(_ value1: String) -> String {
         return String(format: NSLocalizedString("error_http_bad_content_type", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
@@ -128,14 +175,49 @@ struct R: Rswift.Validatable {
         return String(format: NSLocalizedString("error_http_json_decode_error", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
       }
       
+      /// Value: Loading...
+      static func selling_loading_hud_text(_: Void = ()) -> String {
+        return NSLocalizedString("selling_loading_hud_text", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Number owned: %@
+      static func selling_cell_number_owned(_ value1: String) -> String {
+        return String(format: NSLocalizedString("selling_cell_number_owned", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
+      }
+      
       /// Value: Ok
       static func common_ok_button(_: Void = ()) -> String {
         return NSLocalizedString("common_ok_button", bundle: R.hostingBundle, comment: "")
       }
       
+      /// Value: Sell shares
+      static func sell_share_dialog_title(_: Void = ()) -> String {
+        return NSLocalizedString("sell_share_dialog_title", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Total
+      static func sell_share_dialog_total_price(_: Void = ()) -> String {
+        return NSLocalizedString("sell_share_dialog_total_price", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Total shares: %d
+      static func common_total_shares(_ value1: Int) -> String {
+        return String(format: NSLocalizedString("common_total_shares", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
+      }
+      
       /// Value: Unexpected status code: %d
       static func error_http_bad_status_code(_ value1: Int) -> String {
         return String(format: NSLocalizedString("error_http_bad_status_code", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
+      }
+      
+      /// Value: Warning: you are selling over %d%% of your shares
+      static func selling_high_percent_warning(_ value1: Int) -> String {
+        return String(format: NSLocalizedString("selling_high_percent_warning", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
+      }
+      
+      /// Value: You only have %d to sell
+      static func sell_share_dialog_insufficient_shares(_ value1: Int) -> String {
+        return String(format: NSLocalizedString("sell_share_dialog_insufficient_shares", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
       }
       
       fileprivate init() {}
@@ -163,6 +245,17 @@ struct _R: Rswift.Validatable {
   }
   
   struct nib {
+    struct _SellShareDialog: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "SellShareDialog"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
+    }
+    
     struct _ShareSellListCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
       typealias ReusableType = ShareSellListCell
       

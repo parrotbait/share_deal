@@ -11,5 +11,7 @@ import RxSwift
 
 protocol ShareSellingRepository {
     func getCertificates() -> Observable<[ShareCertificate]>
-    func getSharesPrice() -> Observable<SharesPrice>
+    
+    var price: Observable<SharesPrice> { get }
+    func getSharesPrice()
 }

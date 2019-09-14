@@ -8,10 +8,12 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 class ShareSellingRepositoryImpl: ShareSellingRepository {
     
     private let provider: ServiceProvider
+    private let bag = DisposeBag()
     init(provider: ServiceProvider) {
         self.provider = provider
     }
@@ -20,7 +22,16 @@ class ShareSellingRepositoryImpl: ShareSellingRepository {
         return provider.share.getCertificates()
     }
     
-    func getSharesPrice() -> Observable<SharesPrice> {
-        return provider.share.getCurrentPrice()
+    var price: Observable<SharesPrice> {
+        return _price.compactMap({ $0 }).asObservable()
+    }
+    private var _price = BehaviorSubject<SharesPrice?>(value: nil)
+    
+    func getSharesPrice() {
+        provider.share.getCurrentPrice().subscribe(onNext: { [weak self] (cert) in
+            self?._price.onNext(cert)
+        }, onError: { [weak self] (error) in
+            self?._price.onError(error)
+        }).disposed(by: bag)
     }
 }

@@ -21,7 +21,7 @@ func customDateParser(_ decoder: Decoder) throws -> Date {
         return Date(timeIntervalSince1970: TimeInterval(millis) / 1000)
     }
     // TODO: this is pretty unsatisfcatory
-    return Date.init(timeIntervalSince1970: 0)
+    return Date(timeIntervalSince1970: 0)
 }
 
 class DefaultHttpJsonResponseParser: HttpResponseParser {
