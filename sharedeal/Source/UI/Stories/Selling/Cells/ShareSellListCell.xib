@@ -19,14 +19,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3e-ww-SZT">
-                        <rect key="frame" x="16" y="8" width="32.5" height="34.5"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                        <rect key="frame" x="16" y="8" width="37" height="32"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lye-Jn-8ia">
-                        <rect key="frame" x="16" y="50.5" width="26.5" height="12"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <rect key="frame" x="16" y="48" width="31" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -69,7 +69,6 @@
                 <outlet property="cancelSellButton" destination="gkZ-gw-3cL" id="7Pn-2W-eDG"/>
                 <outlet property="currentSharesLabel" destination="lye-Jn-8ia" id="fco-89-U9s"/>
                 <outlet property="nameLabel" destination="f3e-ww-SZT" id="KYL-Nn-9Q5"/>
-                <outlet property="selectedBackgroundView" destination="lye-Jn-8ia" id="aNq-MD-WAN"/>
                 <outlet property="sellingSharesLabel" destination="R98-h1-2wn" id="mj7-CN-76i"/>
             </connections>
             <point key="canvasLocation" x="37.681159420289859" y="46.540178571428569"/>
