@@ -1,0 +1,79 @@
+disabled_rules:
+  - colon
+  - comma
+  - control_statement
+  - trailing_whitespace
+  - mark
+  - force_cast
+  - opening_brace
+  - redundant_string_enum_value
+  - implicit_getter
+  - nesting
+  - identifier_name
+  - switch_case_alignment
+  - notification_center_detachment
+  - unused_setter_value
+
+opt_in_rules: 
+  - empty_count
+
+excluded:
+  - Carthage
+  - Pods
+  - sharedeal/Source/Generated/R.generated.swift
+  
+analyzer_rules:
+  - explicit_self
+
+cyclomatic_complexity:
+  ignores_case_statements: true
+  warning: 25
+  error: 40
+
+function_body_length:
+  warning: 100
+  error: 150
+  
+force_cast: warning
+
+force_try:
+  severity: warning
+  
+line_length: 200
+
+type_body_length:
+  - 500 # warning
+  - 600 # error
+  
+file_length:
+  warning: 1000
+  error: 2000
+  
+type_name:
+  min_length: 4 # only warning
+  max_length:
+    warning: 60
+    error: 80
+  excluded: 
+    - iPhone
+    - Sex
+    - Tab
+    - Tag
+identifier_name:
+  min_length:
+    error: 1
+    
+  excluded:
+    - id
+    - ID
+    - rhs
+    - lhs
+    - now
+    - url
+    - URL
+    - key
+    - vc
+    - x
+    - y
+    
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji, sonarqube, markdown)

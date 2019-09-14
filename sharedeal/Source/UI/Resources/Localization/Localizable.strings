@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  sharedeal
+
+  Created by Eddie Long on 14/09/2019.
+  Copyright © 2019 Eddie Long. All rights reserved.
+*/
+
+"common_error_title" = "Error!";
+"common_ok_button" = "Ok";
+"error_http_empty" = "Empty data returned from the server";
+"error_http_connection_error" = "Connection error: %@";
+"error_http_bad_content_type" = "Invalid content type: %@";
+"error_http_json_decode_error" = "JSON decode error: %@";
+"error_http_bad_status_code" = "Unexpected status code: %d";
