@@ -11,7 +11,7 @@ import Foundation
 struct ShareCertificate: Codable {
 
     let id: Int
-    let numShares: Int
+    var numShares: Int
     let issueDate: Date
     
     enum CodingKeys: String, CodingKey {

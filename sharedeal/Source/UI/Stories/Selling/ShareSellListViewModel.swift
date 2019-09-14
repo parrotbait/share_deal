@@ -155,8 +155,45 @@ class ShareSellingListViewModel {
     
     // MARK: Actions
     func sell() {
+        let viewModels = outputs._shares.value
         
-        clear()
+        let shareList = viewModels.map { (viewModel) -> ShareCertificateSale? in
+            guard let total = try? viewModel.data.numberOfSharesSelling.value() else {
+                return nil
+            }
+            guard total > 0 else { return nil }
+            return ShareCertificateSale(id: viewModel.data.cert.id, numberOfShares: total)
+        }.compactMap({ $0 })
+        
+        provider.share.sellShares(items: shareList).subscribe(onNext: { _ in
+            var modelsToRemove = [Int]()
+            viewModels.forEach({ (viewModel) in
+                viewModel.data.numberOfSharesSelling.onNext(0)
+                if let match = shareList.first(where: { viewModel.data.cert.id == $0.id }) {
+                    // Modify the observer
+                    if let existingValue = try? viewModel.data.numberOfShares.value() {
+                        let newTotal = existingValue - match.numberOfShares
+                        viewModel.data.numberOfShares.onNext(newTotal)
+                        if newTotal <= 0 {
+                            modelsToRemove.append(viewModel.data.cert.id)
+                        }
+                    }
+                }
+            })
+            // TODO: Ideally when completing this call the REST endpoint would either return the updated models
+            // Or we re-fetch the list
+            // Here we locally modify the existing model
+            if !modelsToRemove.isEmpty {
+                var newModels = self.outputs._shares.value
+                newModels.removeAll(where: { (viewModel) -> Bool in
+                    return modelsToRemove.contains(viewModel.data.cert.id)
+                })
+                self.outputs._shares.accept(newModels)
+            }
+            
+        }, onError: { [weak self] (error) in
+            self?.outputs._error.accept(error)
+        }).disposed(by: bag)
     }
     
     func clear() {

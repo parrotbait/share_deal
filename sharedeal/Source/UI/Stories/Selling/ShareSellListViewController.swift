@@ -49,7 +49,7 @@ class ShareSellListViewController: UIViewController {
     private func setupBindings() {
         
         viewModel.outputs.shares
-        .bind(to: tableView.rx.items(cellIdentifier: R.nib.shareSellListCell.name, cellType: ShareSellListCell.self)) { [weak self] (_, viewModel, cell) in
+        .bind(to: tableView.rx.items(cellIdentifier: R.nib.shareSellListCell.name, cellType: ShareSellListCell.self)) { (_, viewModel, cell) in
             cell.configure(with: viewModel)
         }.disposed(by: bag)
         

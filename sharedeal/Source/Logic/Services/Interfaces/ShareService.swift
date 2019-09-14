@@ -12,4 +12,5 @@ import RxSwift
 protocol ShareService {
     func getCertificates() -> Observable<[ShareCertificate]>
     func getCurrentPrice() -> Observable<SharesPrice>
+    func sellShares(items: [ShareCertificateSale]) -> Observable<Void>
 }

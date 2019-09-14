@@ -54,6 +54,8 @@
 		D74FA0EE232D32B7009ED99E /* SellShareDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74FA0EC232D32B7009ED99E /* SellShareDialog.xib */; };
 		D74FA0F0232D34F8009ED99E /* SellShareDialogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0EF232D34F8009ED99E /* SellShareDialogViewModel.swift */; };
 		D74FA0F2232D7152009ED99E /* ShareCertificateRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0F1232D7152009ED99E /* ShareCertificateRecord.swift */; };
+		D74FA0F4232D97E2009ED99E /* ShareCertificateSale.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0F3232D97E2009ED99E /* ShareCertificateSale.swift */; };
+		D74FA0F6232DA474009ED99E /* DefaultHttpPlaintextParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0F5232DA474009ED99E /* DefaultHttpPlaintextParser.swift */; };
 		EEE8E82C0D4424A997B5B17F /* Pods_sharedealTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCAA0B9FBCD41FD61C1606C /* Pods_sharedealTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +137,8 @@
 		D74FA0EC232D32B7009ED99E /* SellShareDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SellShareDialog.xib; sourceTree = "<group>"; };
 		D74FA0EF232D34F8009ED99E /* SellShareDialogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellShareDialogViewModel.swift; sourceTree = "<group>"; };
 		D74FA0F1232D7152009ED99E /* ShareCertificateRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCertificateRecord.swift; sourceTree = "<group>"; };
+		D74FA0F3232D97E2009ED99E /* ShareCertificateSale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCertificateSale.swift; sourceTree = "<group>"; };
+		D74FA0F5232DA474009ED99E /* DefaultHttpPlaintextParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHttpPlaintextParser.swift; sourceTree = "<group>"; };
 		F948E7C622514E59A561D943 /* Pods-sharedeal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharedeal.debug.xcconfig"; path = "Target Support Files/Pods-sharedeal/Pods-sharedeal.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -375,6 +379,7 @@
 				D74FA0AB232CFE93009ED99E /* ShareCertificate.swift */,
 				D74FA0AD232CFF58009ED99E /* SharesPrice.swift */,
 				D74FA0F1232D7152009ED99E /* ShareCertificateRecord.swift */,
+				D74FA0F3232D97E2009ED99E /* ShareCertificateSale.swift */,
 			);
 			path = Shares;
 			sourceTree = "<group>";
@@ -443,6 +448,7 @@
 			children = (
 				D74FA0DC232D1DCC009ED99E /* HttpResponseParser.swift */,
 				D74FA0DA232D1DBE009ED99E /* DefaultHttpJsonResponseParser.swift */,
+				D74FA0F5232DA474009ED99E /* DefaultHttpPlaintextParser.swift */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
@@ -764,8 +770,10 @@
 				D74FA096232CF8AF009ED99E /* HttpServiceImpl.swift in Sources */,
 				D74FA0B1232CFFAB009ED99E /* Currency.swift in Sources */,
 				D74FA081232CF761009ED99E /* Coordinator.swift in Sources */,
+				D74FA0F4232D97E2009ED99E /* ShareCertificateSale.swift in Sources */,
 				D74FA0A3232CFC7F009ED99E /* Data.swift.swift in Sources */,
 				D74FA0F0232D34F8009ED99E /* SellShareDialogViewModel.swift in Sources */,
+				D74FA0F6232DA474009ED99E /* DefaultHttpPlaintextParser.swift in Sources */,
 				D74FA08E232CF80E009ED99E /* HttpService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

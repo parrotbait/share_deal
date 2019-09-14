@@ -75,7 +75,7 @@ class SellShareDialogViewModel {
             $0 > 0 ? $0 : nil
         }).bind(to: outputs._numberOfShares).disposed(by: bag)
         outputs._name.accept(R.string.localizable.selling_cell_title("\(record.cert.id)"))
-        outputs._totalShares.accept(R.string.localizable.common_total_shares(record.cert.numShares))
+        record.numberOfShares.map({R.string.localizable.common_total_shares($0) }).bind(to: outputs._totalShares).disposed(by: bag)
         
         inputs.numberOfShares
             .distinctUntilChanged()
@@ -83,10 +83,11 @@ class SellShareDialogViewModel {
             .subscribe(onNext: { [weak self] (text) in
             guard let self = self else { return }
             if let total = Int(text), total > 0 {
-                let canSellTotal = self.canSell(cert: self.record.cert, numberOfShares: total)
+                let canSellTotal = self.canSell(record: self.record, numberOfShares: total)
                 self.outputs._saveButton.accept(canSellTotal)
                 if !canSellTotal {
-                    self.outputs._error.accept(R.string.localizable.sell_share_dialog_insufficient_shares(self.record.cert.numShares))
+                    if let numShares = try? self.record.numberOfShares.value() { self.outputs._error.accept(R.string.localizable.sell_share_dialog_insufficient_shares(numShares))
+                    }
                 }
             } else {
                 self.outputs._saveButton.accept(false)
@@ -106,8 +107,9 @@ class SellShareDialogViewModel {
         }).disposed(by: bag)
     }
     
-    func canSell(cert: ShareCertificate, numberOfShares: Int) -> Bool {
-        return numberOfShares <= cert.numShares && numberOfShares > 0
+    func canSell(record: ShareCertificateRecord, numberOfShares: Int) -> Bool {
+        guard let total = try? record.numberOfShares.value() else { return false }
+        return numberOfShares <= total && numberOfShares > 0
     }
     
     func save() {
