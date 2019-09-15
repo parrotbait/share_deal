@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 // TODO: this should be coming from a config - ideally remotely
-let priceRefreshRateSeconds: Double = 5
+let priceRefreshRateSeconds: Double = 30
 let warningLevelPercentageThreshold: Int = 50
 
 class ShareSellingListViewModel {
