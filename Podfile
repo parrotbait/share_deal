@@ -15,12 +15,14 @@ target 'sharedeal' do
   
   target 'sharedealTests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'RxBlocking', '~> 5.0.0'
+    pod 'RxTest', '~> 5.0.0'
   end
 
   target 'sharedealUITests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'RxBlocking', '~> 5.0.0'
+    pod 'RxTest', '~> 5.0.0'
   end
 
 end

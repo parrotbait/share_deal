@@ -12,7 +12,7 @@
 		D74FA048232CF477009ED99E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D74FA046232CF477009ED99E /* Main.storyboard */; };
 		D74FA04A232CF477009ED99E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D74FA049232CF477009ED99E /* Assets.xcassets */; };
 		D74FA04D232CF477009ED99E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D74FA04B232CF477009ED99E /* LaunchScreen.storyboard */; };
-		D74FA058232CF478009ED99E /* sharedealTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA057232CF478009ED99E /* sharedealTests.swift */; };
+		D74FA058232CF478009ED99E /* ShareListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA057232CF478009ED99E /* ShareListViewModelTests.swift */; };
 		D74FA063232CF478009ED99E /* sharedealUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA062232CF478009ED99E /* sharedealUITests.swift */; };
 		D74FA079232CF539009ED99E /* ShareSellListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA076232CF539009ED99E /* ShareSellListViewController.swift */; };
 		D74FA07A232CF539009ED99E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA077232CF539009ED99E /* AppDelegate.swift */; };
@@ -56,6 +56,11 @@
 		D74FA0F2232D7152009ED99E /* ShareCertificateRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0F1232D7152009ED99E /* ShareCertificateRecord.swift */; };
 		D74FA0F4232D97E2009ED99E /* ShareCertificateSale.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0F3232D97E2009ED99E /* ShareCertificateSale.swift */; };
 		D74FA0F6232DA474009ED99E /* DefaultHttpPlaintextParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0F5232DA474009ED99E /* DefaultHttpPlaintextParser.swift */; };
+		D74FA0F8232DADC6009ED99E /* MockProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0F7232DADC6009ED99E /* MockProvider.swift */; };
+		D74FA0FA232DAE2B009ED99E /* MockHttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0F9232DAE2B009ED99E /* MockHttpService.swift */; };
+		D74FA0FC232DAEDF009ED99E /* MockShareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0FB232DAEDF009ED99E /* MockShareService.swift */; };
+		D74FA0FE232DAFB0009ED99E /* MockShareListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0FD232DAFB0009ED99E /* MockShareListCoordinator.swift */; };
+		D74FA100232DB01F009ED99E /* MockShareRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0FF232DB01F009ED99E /* MockShareRepository.swift */; };
 		EEE8E82C0D4424A997B5B17F /* Pods_sharedealTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCAA0B9FBCD41FD61C1606C /* Pods_sharedealTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,7 +96,7 @@
 		D74FA04C232CF477009ED99E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D74FA04E232CF477009ED99E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D74FA053232CF478009ED99E /* sharedealTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sharedealTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D74FA057232CF478009ED99E /* sharedealTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sharedealTests.swift; sourceTree = "<group>"; };
+		D74FA057232CF478009ED99E /* ShareListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareListViewModelTests.swift; sourceTree = "<group>"; };
 		D74FA059232CF478009ED99E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D74FA05E232CF478009ED99E /* sharedealUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sharedealUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D74FA062232CF478009ED99E /* sharedealUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sharedealUITests.swift; sourceTree = "<group>"; };
@@ -139,6 +144,11 @@
 		D74FA0F1232D7152009ED99E /* ShareCertificateRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCertificateRecord.swift; sourceTree = "<group>"; };
 		D74FA0F3232D97E2009ED99E /* ShareCertificateSale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCertificateSale.swift; sourceTree = "<group>"; };
 		D74FA0F5232DA474009ED99E /* DefaultHttpPlaintextParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHttpPlaintextParser.swift; sourceTree = "<group>"; };
+		D74FA0F7232DADC6009ED99E /* MockProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProvider.swift; sourceTree = "<group>"; };
+		D74FA0F9232DAE2B009ED99E /* MockHttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHttpService.swift; sourceTree = "<group>"; };
+		D74FA0FB232DAEDF009ED99E /* MockShareService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockShareService.swift; sourceTree = "<group>"; };
+		D74FA0FD232DAFB0009ED99E /* MockShareListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockShareListCoordinator.swift; sourceTree = "<group>"; };
+		D74FA0FF232DB01F009ED99E /* MockShareRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockShareRepository.swift; sourceTree = "<group>"; };
 		F948E7C622514E59A561D943 /* Pods-sharedeal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharedeal.debug.xcconfig"; path = "Target Support Files/Pods-sharedeal/Pods-sharedeal.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,8 +242,13 @@
 		D74FA056232CF478009ED99E /* sharedealTests */ = {
 			isa = PBXGroup;
 			children = (
-				D74FA057232CF478009ED99E /* sharedealTests.swift */,
+				D74FA057232CF478009ED99E /* ShareListViewModelTests.swift */,
 				D74FA059232CF478009ED99E /* Info.plist */,
+				D74FA0F7232DADC6009ED99E /* MockProvider.swift */,
+				D74FA0F9232DAE2B009ED99E /* MockHttpService.swift */,
+				D74FA0FB232DAEDF009ED99E /* MockShareService.swift */,
+				D74FA0FD232DAFB0009ED99E /* MockShareListCoordinator.swift */,
+				D74FA0FF232DB01F009ED99E /* MockShareRepository.swift */,
 			);
 			path = sharedealTests;
 			sourceTree = "<group>";
@@ -503,6 +518,7 @@
 				D74FA04F232CF478009ED99E /* Sources */,
 				D74FA050232CF478009ED99E /* Frameworks */,
 				D74FA051232CF478009ED99E /* Resources */,
+				0C5C0273935315802970FEA6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -522,6 +538,7 @@
 				D74FA05A232CF478009ED99E /* Sources */,
 				D74FA05B232CF478009ED99E /* Frameworks */,
 				D74FA05C232CF478009ED99E /* Resources */,
+				B5F390DBA02D28817C33F437 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -610,6 +627,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0C5C0273935315802970FEA6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sharedealTests/Pods-sharedealTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sharedealTests/Pods-sharedealTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sharedealTests/Pods-sharedealTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2A071113B263706BE665D97D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -647,6 +681,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5F390DBA02D28817C33F437 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sharedealUITests/Pods-sharedealUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sharedealUITests/Pods-sharedealUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sharedealUITests/Pods-sharedealUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B8F6E41485E29C7D881C2113 /* [CP] Check Pods Manifest.lock */ = {
@@ -782,7 +833,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D74FA058232CF478009ED99E /* sharedealTests.swift in Sources */,
+				D74FA0FE232DAFB0009ED99E /* MockShareListCoordinator.swift in Sources */,
+				D74FA0F8232DADC6009ED99E /* MockProvider.swift in Sources */,
+				D74FA0FA232DAE2B009ED99E /* MockHttpService.swift in Sources */,
+				D74FA058232CF478009ED99E /* ShareListViewModelTests.swift in Sources */,
+				D74FA0FC232DAEDF009ED99E /* MockShareService.swift in Sources */,
+				D74FA100232DB01F009ED99E /* MockShareRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -994,7 +1050,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4491E361734C6874337E523B /* Pods-sharedealTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2MUCF2S946;
@@ -1016,7 +1071,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 901F8352914030E9F2816ABD /* Pods-sharedealTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2MUCF2S946;
@@ -1038,7 +1092,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 40AE103E7D04077D3EF7707B /* Pods-sharedealUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2MUCF2S946;
 				INFOPLIST_FILE = sharedealUITests/Info.plist;
@@ -1059,7 +1112,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 60FA54CB5E7910CF78CC7DEA /* Pods-sharedealUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2MUCF2S946;
 				INFOPLIST_FILE = sharedealUITests/Info.plist;

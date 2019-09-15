@@ -30,8 +30,8 @@ class ShareSellingRepositoryImpl: ShareSellingRepository {
     func getSharesPrice() {
         provider.share.getCurrentPrice().subscribe(onNext: { [weak self] (cert) in
             self?._price.onNext(cert)
-        }, onError: { [weak self] (error) in
-            self?._price.onError(error)
+        }, onError: { (error) in
+            print(error)
         }).disposed(by: bag)
     }
 }
