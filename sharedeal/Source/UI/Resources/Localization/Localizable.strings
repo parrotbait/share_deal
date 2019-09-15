@@ -18,9 +18,9 @@
 "selling_cell_title" = "Certificate #%@";
 "selling_cell_number_owned" = "Number owned: %@";
 "sell_share_dialog_title" = "Sell shares";
-"sell_share_dialog_total_price" = "Total";
+"sell_share_dialog_total_price" = "Total sale value";
 "sell_share_dialog_error_numerical_text" = "Expected positive numerical value";
 "sell_share_dialog_insufficient_shares" = "You only have %d to sell";
 "selling_high_percent_warning" = "Warning: you are selling over %d%% of your shares";
-"common_current_price" = "Current Price: %@";
-"common_total_shares" = "Total shares: %d";
+"common_current_price" = "Share Price: %@";
+"common_total_shares" = "Total shares held: %d";

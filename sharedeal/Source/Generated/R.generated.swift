@@ -104,8 +104,6 @@ struct R: Rswift.Validatable {
       static let selling_cell_title = Rswift.StringResource(key: "selling_cell_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Connection error: %@
       static let error_http_connection_error = Rswift.StringResource(key: "error_http_connection_error", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Current Price: %@
-      static let common_current_price = Rswift.StringResource(key: "common_current_price", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Empty data returned from the server
       static let error_http_empty = Rswift.StringResource(key: "error_http_empty", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Error!
@@ -126,9 +124,11 @@ struct R: Rswift.Validatable {
       static let common_ok_button = Rswift.StringResource(key: "common_ok_button", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Sell shares
       static let sell_share_dialog_title = Rswift.StringResource(key: "sell_share_dialog_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Share Price: %@
+      static let common_current_price = Rswift.StringResource(key: "common_current_price", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Total
       static let sell_share_dialog_total_price = Rswift.StringResource(key: "sell_share_dialog_total_price", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Total shares: %d
+      /// Value: Total shares held: %d
       static let common_total_shares = Rswift.StringResource(key: "common_total_shares", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Unexpected status code: %d
       static let error_http_bad_status_code = Rswift.StringResource(key: "error_http_bad_status_code", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -145,11 +145,6 @@ struct R: Rswift.Validatable {
       /// Value: Connection error: %@
       static func error_http_connection_error(_ value1: String) -> String {
         return String(format: NSLocalizedString("error_http_connection_error", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
-      }
-      
-      /// Value: Current Price: %@
-      static func common_current_price(_ value1: String) -> String {
-        return String(format: NSLocalizedString("common_current_price", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
       }
       
       /// Value: Empty data returned from the server
@@ -202,12 +197,17 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("sell_share_dialog_title", bundle: R.hostingBundle, comment: "")
       }
       
+      /// Value: Share Price: %@
+      static func common_current_price(_ value1: String) -> String {
+        return String(format: NSLocalizedString("common_current_price", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
+      }
+      
       /// Value: Total
       static func sell_share_dialog_total_price(_: Void = ()) -> String {
         return NSLocalizedString("sell_share_dialog_total_price", bundle: R.hostingBundle, comment: "")
       }
       
-      /// Value: Total shares: %d
+      /// Value: Total shares held: %d
       static func common_total_shares(_ value1: Int) -> String {
         return String(format: NSLocalizedString("common_total_shares", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
       }
