@@ -22,36 +22,25 @@ class SellShareDialogViewModel {
         }
         fileprivate let _numberOfShares = BehaviorSubject<Int?>(value: nil)
         
-        var totalPrice: Observable<String> {
-            return _totalPrice.asObservable()
-        }
+        var totalPrice: Observable<String> { return _totalPrice.asObservable() }
         fileprivate let _totalPrice = BehaviorRelay<String>(value: "")
         
-        var name: Observable<String> {
-            return _name.asObservable()
-        }
+        var name: Observable<String> { return _name.asObservable() }
         fileprivate let _name = BehaviorRelay<String>(value: "")
         
-        var totalShares: Observable<String> {
-            return _totalShares.asObservable()
-        }
+        var totalShares: Observable<String> { return _totalShares.asObservable() }
         fileprivate let _totalShares = BehaviorRelay<String>(value: "")
         
-        var currentPrice: Observable<String> {
-            return _currentPrice.asObservable()
-        }
+        var currentPrice: Observable<String> { return _currentPrice.asObservable() }
         fileprivate let _currentPrice = BehaviorRelay<String>(value: "")
         
-        var saveButton: Observable<Bool> {
-            return _saveButton.asObservable()
-        }
+        var saveButton: Observable<Bool> { return _saveButton.asObservable() }
         fileprivate let _saveButton = BehaviorRelay<Bool>(value: false)
         
-        var error: Observable<String> {
-            return _error.asObservable()
-        }
+        var error: Observable<String> { return _error.asObservable()}
         fileprivate let _error = BehaviorRelay<String>(value: "")
     }
+    
     let inputs = Inputs()
     let outputs = Outputs()
     private let record: ShareCertificateRecord

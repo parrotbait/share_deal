@@ -26,9 +26,22 @@ class SharedealUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSetupSaleViaDialog() {
+        
+        let app = XCUIApplication()
+        let tableView = app.tables["sell_list_table_view"]
+        XCTAssert(tableView.cells.count > 0) // swiftlint:disable:this empty_count
+        // Ensure the dialog is not present
+        XCTAssertFalse(app.buttons["sell_dialog_save_button"].exists)
+        tableView.cells.staticTexts.element(boundBy: 0).tap()
+        // Ensure the dialog is now present
+        XCTAssertFalse(app.buttons["sell_dialog_save_button"].isEnabled)
+        app.textFields["sell_dialog_textfield"].tap()
+        app.textFields["sell_dialog_textfield"].typeText("100")
+        XCTAssertTrue(app.buttons["sell_dialog_save_button"].isEnabled)
+        app.buttons["Save"].tap()
+        
+        // Ensure the dialog is now gone
+        XCTAssertFalse(app.buttons["sell_dialog_save_button"].exists)
     }
-
 }

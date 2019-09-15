@@ -58,9 +58,10 @@
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gum-nI-lk4" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                             <rect key="frame" x="16" y="106.66666666666663" width="311" height="30"/>
+                            <accessibility key="accessibilityConfiguration" identifier="sell_dialog_textfield"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Number of shares"/>
                             </userDefinedRuntimeAttributes>
@@ -82,12 +83,14 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Trk-ko-3Q0">
                                     <rect key="frame" x="0.0" y="0.0" width="139.66666666666666" height="30"/>
+                                    <accessibility key="accessibilityConfiguration" identifier="sell_dialog_cancel_buttons"/>
                                     <state key="normal" title="Cancel">
                                         <color key="titleColor" red="0.90674279658813128" green="0.14250404344179635" blue="0.094010097073432386" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hxe-98-ht4">
                                     <rect key="frame" x="171.66666666666663" y="0.0" width="139.33333333333337" height="30"/>
+                                    <accessibility key="accessibilityConfiguration" identifier="sell_dialog_save_button"/>
                                     <state key="normal" title="Save">
                                         <color key="titleColor" red="0.0" green="0.55616463014250794" blue="0.048762235001119758" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
@@ -96,6 +99,7 @@
                         </stackView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <accessibility key="accessibilityConfiguration" identifier="sell_dialog_content_view"/>
                     <constraints>
                         <constraint firstItem="gum-nI-lk4" firstAttribute="top" secondItem="ObK-Vc-MCl" secondAttribute="bottom" constant="16" id="2Eh-pS-cxs"/>
                         <constraint firstItem="P4K-4s-po0" firstAttribute="leading" secondItem="pX8-ma-TzJ" secondAttribute="leading" constant="16" id="7VN-C9-loE"/>

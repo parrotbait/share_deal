@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-sharedealUITests/Pods-sharedealUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework
 ${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework
 ${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework
 ${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework

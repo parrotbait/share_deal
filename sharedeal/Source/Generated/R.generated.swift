@@ -126,7 +126,7 @@ struct R: Rswift.Validatable {
       static let sell_share_dialog_title = Rswift.StringResource(key: "sell_share_dialog_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Share Price: %@
       static let common_current_price = Rswift.StringResource(key: "common_current_price", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Total
+      /// Value: Total sale value
       static let sell_share_dialog_total_price = Rswift.StringResource(key: "sell_share_dialog_total_price", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Total shares held: %d
       static let common_total_shares = Rswift.StringResource(key: "common_total_shares", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -202,7 +202,7 @@ struct R: Rswift.Validatable {
         return String(format: NSLocalizedString("common_current_price", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
       }
       
-      /// Value: Total
+      /// Value: Total sale value
       static func sell_share_dialog_total_price(_: Void = ()) -> String {
         return NSLocalizedString("sell_share_dialog_total_price", bundle: R.hostingBundle, comment: "")
       }
