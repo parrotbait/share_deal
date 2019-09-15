@@ -10,7 +10,6 @@ import Foundation
 
 class DefaultHttpPlaintextResponseParser: HttpResponseParser {
     func parse<T>(data: Data, response: HTTPURLResponse) -> Result<T, Error> where T : Decodable {
-        // TODO: Add tests
         if let contentType = response.find(header: "content-type")?.lowercased() {
             if !contentType.contains("text/plain") {
                 return .failure(HttpError.invalidContentType(type: contentType))

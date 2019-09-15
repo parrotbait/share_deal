@@ -20,13 +20,11 @@ func customDateParser(_ decoder: Decoder) throws -> Date {
         scanner.isAtEnd {
         return Date(timeIntervalSince1970: TimeInterval(millis) / 1000)
     }
-    // TODO: this is pretty unsatisfcatory
     return Date(timeIntervalSince1970: 0)
 }
 
 class DefaultHttpJsonResponseParser: HttpResponseParser {
     func parse<T>(data: Data, response: HTTPURLResponse) -> Result<T, Error> where T : Decodable {
-        // TODO: Add tests
         if let contentType = response.find(header: "content-type")?.lowercased() {
             if !contentType.contains("application/json") {
                 return .failure(HttpError.invalidContentType(type: contentType))

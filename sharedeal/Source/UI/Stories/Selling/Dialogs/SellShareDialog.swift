@@ -36,7 +36,7 @@ class SellShareDialog: BaseDialog {
         viewModel.outputs.totalShares.bind(to: sharesLabel.rx.text).disposed(by: bag)
         totalTitleLabel.text = R.string.localizable.sell_share_dialog_total_price()
         // Clear down the error when the user types
-        numSharesTextfield.rx.text.distinctUntilChanged().subscribe(onNext: { [weak self] (error) in
+        numSharesTextfield.rx.text.distinctUntilChanged().subscribe(onNext: { [weak self] _ in
             self?.numSharesTextfield.errorMessage = nil
         }).disposed(by: bag)
         viewModel.outputs.saveButton.bind(to: saveButton.rx.isEnabled).disposed(by: bag)

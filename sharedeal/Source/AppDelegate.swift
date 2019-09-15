@@ -9,6 +9,9 @@
 import UIKit
 
 @UIApplicationMain
+// This could be defined by a build script and not hardcoded
+private let productionEnvironment = Environment(name: "Production", host: "http://developerexam.equityplansdemo.com")
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
@@ -57,9 +60,8 @@ extension AppDelegate {
     
     private func getProvider() -> ServiceProvider {
         // TODO: Use https instead of http
-        // TODO: Move this elsewhere
-        let environment = Environment(name: "Production", host: "http://developerexam.equityplansdemo.com")
-        return ServiceProviderImpl(environment: environment)
+        
+        return ServiceProviderImpl(environment: productionEnvironment)
         
     }
 }

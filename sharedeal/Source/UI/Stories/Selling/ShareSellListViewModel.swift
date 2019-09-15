@@ -180,6 +180,7 @@ class ShareSellingListViewModel {
                     }
                 }
             })
+            
             // TODO: Ideally when completing this call the REST endpoint would either return the updated models
             // Or we re-fetch the list
             // Here we locally modify the existing model

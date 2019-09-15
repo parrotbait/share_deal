@@ -29,6 +29,7 @@ class ShareServiceImpl: ShareService {
     func sellShares(items: [ShareCertificateSale]) -> Observable<Void> {
         let request = ShareRequest.sellShares(shares: items)
         return http.execute(request: request).map({ (result: String) -> Void in
+            print (result)
             return ()
         })
     }
