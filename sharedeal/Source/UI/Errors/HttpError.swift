@@ -17,6 +17,8 @@ extension HttpError: LocalizedError {
             return R.string.localizable.error_http_connection_error(error.localizedDescription)
         case .invalidContentType(let type):
             return R.string.localizable.error_http_bad_content_type(type)
+        case .missingContentType:
+            return R.string.localizable.error_http_missing_content_type()
         case .jsonDecodeError(let error):
             return R.string.localizable.error_http_json_decode_error(error.localizedDescription)
         case .statusCode(let code):

@@ -27,7 +27,6 @@
 		D74FA098232CF8C4009ED99E /* ServiceProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA097232CF8C4009ED99E /* ServiceProviderImpl.swift */; };
 		D74FA09A232CF8FD009ED99E /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA099232CF8FD009ED99E /* HttpRequest.swift */; };
 		D74FA09E232CF957009ED99E /* ShareRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA09D232CF957009ED99E /* ShareRequest.swift */; };
-		D74FA0A1232CFC03009ED99E /* HTTPURLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0A0232CFC03009ED99E /* HTTPURLResponse.swift */; };
 		D74FA0A3232CFC7F009ED99E /* Data.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0A2232CFC7F009ED99E /* Data.swift.swift */; };
 		D74FA0A5232CFDDB009ED99E /* ShareServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0A4232CFDDB009ED99E /* ShareServiceImpl.swift */; };
 		D74FA0A7232CFDE7009ED99E /* ShareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0A6232CFDE7009ED99E /* ShareService.swift */; };
@@ -61,6 +60,7 @@
 		D74FA0FC232DAEDF009ED99E /* MockShareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0FB232DAEDF009ED99E /* MockShareService.swift */; };
 		D74FA0FE232DAFB0009ED99E /* MockShareListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0FD232DAFB0009ED99E /* MockShareListCoordinator.swift */; };
 		D74FA100232DB01F009ED99E /* MockShareRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA0FF232DB01F009ED99E /* MockShareRepository.swift */; };
+		D74FA108232E3A7E009ED99E /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74FA107232E3A7E009ED99E /* ParserTests.swift */; };
 		EEE8E82C0D4424A997B5B17F /* Pods_sharedealTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCAA0B9FBCD41FD61C1606C /* Pods_sharedealTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -114,7 +114,6 @@
 		D74FA097232CF8C4009ED99E /* ServiceProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProviderImpl.swift; sourceTree = "<group>"; };
 		D74FA099232CF8FD009ED99E /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 		D74FA09D232CF957009ED99E /* ShareRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareRequest.swift; sourceTree = "<group>"; };
-		D74FA0A0232CFC03009ED99E /* HTTPURLResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPURLResponse.swift; sourceTree = "<group>"; };
 		D74FA0A2232CFC7F009ED99E /* Data.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift.swift; sourceTree = "<group>"; };
 		D74FA0A4232CFDDB009ED99E /* ShareServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareServiceImpl.swift; sourceTree = "<group>"; };
 		D74FA0A6232CFDE7009ED99E /* ShareService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareService.swift; sourceTree = "<group>"; };
@@ -149,6 +148,7 @@
 		D74FA0FB232DAEDF009ED99E /* MockShareService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockShareService.swift; sourceTree = "<group>"; };
 		D74FA0FD232DAFB0009ED99E /* MockShareListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockShareListCoordinator.swift; sourceTree = "<group>"; };
 		D74FA0FF232DB01F009ED99E /* MockShareRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockShareRepository.swift; sourceTree = "<group>"; };
+		D74FA107232E3A7E009ED99E /* ParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserTests.swift; sourceTree = "<group>"; };
 		F948E7C622514E59A561D943 /* Pods-sharedeal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharedeal.debug.xcconfig"; path = "Target Support Files/Pods-sharedeal/Pods-sharedeal.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -249,6 +249,7 @@
 				D74FA0FB232DAEDF009ED99E /* MockShareService.swift */,
 				D74FA0FD232DAFB0009ED99E /* MockShareListCoordinator.swift */,
 				D74FA0FF232DB01F009ED99E /* MockShareRepository.swift */,
+				D74FA107232E3A7E009ED99E /* ParserTests.swift */,
 			);
 			path = sharedealTests;
 			sourceTree = "<group>";
@@ -382,7 +383,6 @@
 			isa = PBXGroup;
 			children = (
 				D74FA0C9232D1023009ED99E /* Double.swift */,
-				D74FA0A0232CFC03009ED99E /* HTTPURLResponse.swift */,
 				D74FA0A2232CFC7F009ED99E /* Data.swift.swift */,
 			);
 			path = Extensions;
@@ -801,7 +801,6 @@
 				D74FA0D8232D1A7B009ED99E /* HttpError.swift in Sources */,
 				D74FA0E1232D2B67009ED99E /* UIView.swift in Sources */,
 				D74FA098232CF8C4009ED99E /* ServiceProviderImpl.swift in Sources */,
-				D74FA0A1232CFC03009ED99E /* HTTPURLResponse.swift in Sources */,
 				D74FA0AE232CFF58009ED99E /* SharesPrice.swift in Sources */,
 				D74FA0AC232CFE93009ED99E /* ShareCertificate.swift in Sources */,
 				D74FA0F2232D7152009ED99E /* ShareCertificateRecord.swift in Sources */,
@@ -837,6 +836,7 @@
 				D74FA0F8232DADC6009ED99E /* MockProvider.swift in Sources */,
 				D74FA0FA232DAE2B009ED99E /* MockHttpService.swift in Sources */,
 				D74FA058232CF478009ED99E /* ShareListViewModelTests.swift in Sources */,
+				D74FA108232E3A7E009ED99E /* ParserTests.swift in Sources */,
 				D74FA0FC232DAEDF009ED99E /* MockShareService.swift in Sources */,
 				D74FA100232DB01F009ED99E /* MockShareRepository.swift in Sources */,
 			);

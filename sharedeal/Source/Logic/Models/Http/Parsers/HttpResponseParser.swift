@@ -8,6 +8,12 @@
 
 import Foundation
 
-protocol HttpResponseParser {
-    func parse<T>(data: Data, response: HTTPURLResponse) -> Result<T, Error> where T: Decodable
+func find(header: String, inHeaders headers: [AnyHashable : Any]) -> String? {
+    let keyValues = headers.map { (String(describing: $0.key).lowercased(), String(describing: $0.value)) }
+    return keyValues.first(where: { $0.0 == header.lowercased() })?.1
 }
+
+protocol HttpResponseParser {
+    func parse<T>(data: Data, headers: [AnyHashable : Any]) -> Result<T, Error> where T: Decodable
+}
+

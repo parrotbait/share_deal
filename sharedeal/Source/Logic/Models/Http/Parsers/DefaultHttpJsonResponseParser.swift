@@ -24,11 +24,13 @@ func customDateParser(_ decoder: Decoder) throws -> Date {
 }
 
 class DefaultHttpJsonResponseParser: HttpResponseParser {
-    func parse<T>(data: Data, response: HTTPURLResponse) -> Result<T, Error> where T : Decodable {
-        if let contentType = response.find(header: "content-type")?.lowercased() {
+    func parse<T>(data: Data, headers: [AnyHashable : Any]) -> Result<T, Error> where T : Decodable {
+        if let contentType = find(header: "content-type", inHeaders: headers)?.lowercased() {
             if !contentType.contains("application/json") {
                 return .failure(HttpError.invalidContentType(type: contentType))
             }
+        } else {
+            return .failure(HttpError.missingContentType)
         }
         
         let decoder = JSONDecoder()

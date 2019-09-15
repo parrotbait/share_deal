@@ -13,6 +13,7 @@ enum HttpError: Error {
     case emptydata
     case statusCode(code: Int)
     case invalidContentType(type: String)
+    case missingContentType
     case jsonDecodeError(error: Error)
     case connectionError(error: Error)
 }

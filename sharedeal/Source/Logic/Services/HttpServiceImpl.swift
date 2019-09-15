@@ -70,7 +70,7 @@ extension HttpServiceImpl {
             }
             
             let parser = request.parser ?? DefaultHttpJsonResponseParser()
-            return completion(parser.parse(data: data, response: response))
+            return completion(parser.parse(data: data, headers: response.allHeaderFields))
         })
         dataTask.resume()
         return HttpCancellable(task: dataTask)

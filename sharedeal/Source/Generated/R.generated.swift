@@ -98,7 +98,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 17 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 18 localization keys.
     struct localizable {
       /// Value: Certificate #%@
       static let selling_cell_title = Rswift.StringResource(key: "selling_cell_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -118,6 +118,8 @@ struct R: Rswift.Validatable {
       static let error_http_json_decode_error = Rswift.StringResource(key: "error_http_json_decode_error", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Loading...
       static let selling_loading_hud_text = Rswift.StringResource(key: "selling_loading_hud_text", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Missing content type in response
+      static let error_http_missing_content_type = Rswift.StringResource(key: "error_http_missing_content_type", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Number owned: %@
       static let selling_cell_number_owned = Rswift.StringResource(key: "selling_cell_number_owned", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Ok
@@ -178,6 +180,11 @@ struct R: Rswift.Validatable {
       /// Value: Loading...
       static func selling_loading_hud_text(_: Void = ()) -> String {
         return NSLocalizedString("selling_loading_hud_text", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Missing content type in response
+      static func error_http_missing_content_type(_: Void = ()) -> String {
+        return NSLocalizedString("error_http_missing_content_type", bundle: R.hostingBundle, comment: "")
       }
       
       /// Value: Number owned: %@

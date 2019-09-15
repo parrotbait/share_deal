@@ -8,10 +8,10 @@
 
 import UIKit
 
-@UIApplicationMain
 // This could be defined by a build script and not hardcoded
 private let productionEnvironment = Environment(name: "Production", host: "http://developerexam.equityplansdemo.com")
 
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?

@@ -11,6 +11,7 @@
 "error_http_empty" = "Empty data returned from the server";
 "error_http_connection_error" = "Connection error: %@";
 "error_http_bad_content_type" = "Invalid content type: %@";
+"error_http_missing_content_type" = "Missing content type in response";
 "error_http_json_decode_error" = "JSON decode error: %@";
 "error_http_bad_status_code" = "Unexpected status code: %d";
 "selling_loading_hud_text" = "Loading...";

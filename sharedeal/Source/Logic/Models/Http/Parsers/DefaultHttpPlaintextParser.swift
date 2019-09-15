@@ -9,11 +9,13 @@
 import Foundation
 
 class DefaultHttpPlaintextResponseParser: HttpResponseParser {
-    func parse<T>(data: Data, response: HTTPURLResponse) -> Result<T, Error> where T : Decodable {
-        if let contentType = response.find(header: "content-type")?.lowercased() {
+    func parse<T>(data: Data, headers: [AnyHashable : Any]) -> Result<T, Error> where T : Decodable {
+        if let contentType = find(header: "content-type", inHeaders: headers)?.lowercased() {
             if !contentType.contains("text/plain") {
                 return .failure(HttpError.invalidContentType(type: contentType))
             }
+        } else {
+            return .failure(HttpError.missingContentType)
         }
         
         if T.self as? String.Type != nil {
